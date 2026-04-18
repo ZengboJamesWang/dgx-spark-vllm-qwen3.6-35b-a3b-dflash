@@ -6,7 +6,7 @@ High-performance inference of **Qwen3.6-35B-A3B** with **DFlash speculative deco
 
 - **~50 tok/s** sustained generation speed
 - **Qwen3.6-35B-A3B** architecture with FP8 MoE quantization
-- **262K context window** (same as Gemma4-26B)
+- **262K context window** (same as Gemma-4-26B-A4B)
 - **~43 GiB GPU memory** at 38% utilization
 - **CUDA 13.0 + Blackwell optimized**
 - **DFlash speculative decoding** ready (requires vLLM with DFlash support)

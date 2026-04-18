@@ -40,9 +40,9 @@ uvx llama-benchy \
 - **Peak Throughput:** 51 tok/s
 - **Coherence:** PASSED
 
-## Comparison with Gemma4-26B
+## Comparison with Gemma-4-26B-A4B
 
-| Metric | Qwen3.6-35B-A3B-DFlash | Gemma4-26B Uncensored |
+| Metric | Qwen3.6-35B-A3B-DFlash | Gemma-4-26B-A4B Uncensored |
 |--------|------------------------|----------------------|
 | **Speed** | ~50 tok/s | ~45 tok/s |
 | **Context** | 262K | 262K |
