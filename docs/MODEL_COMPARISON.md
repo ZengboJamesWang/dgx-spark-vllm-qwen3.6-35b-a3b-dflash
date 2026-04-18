@@ -5,8 +5,8 @@
 | Metric | Qwen3.6-35B-A3B | Gemma-4-26B-A4B Uncensored |
 |--------|----------------|----------------------|
 | **Speed** | ~50 tok/s | ~45 tok/s |
-| **Total Params** | 35.6B | 31B (Gemma-4-31B-it base) |
-| **Active Params** | 3.9B per token | 26B per token |
+| **Total Params** | 35.6B | 26B |
+| **Active Params** | 3.9B per token | 4B per token |
 | **Memory** | ~53 GiB (262K context) | ~47 GiB (262K context) |
 | **Context** | 262K | 262K |
 | **Quantization** | FP8 MoE | NVFP4 MoE |
@@ -15,7 +15,7 @@
 
 ## Key Differences
 
-1. **Active Parameters:** Qwen3.6 uses 3.9B active params vs Gemma-4-26B-A4B's 26B active params
+1. **Active Parameters:** Qwen3.6 uses 3.9B active params vs Gemma-4-26B-A4B's 4B active params
    - Qwen3.6: More efficient per-token computation
    - Gemma-4-26B-A4B: More capacity per token but higher compute cost
 
@@ -30,7 +30,7 @@
 
 ## Why Qwen3.6 is Faster
 
-1. **Smaller active params**: 3.9B vs 26B per token means less computation
+1. **Smaller active params**: 3.9B vs 4B per token means less computation
 2. **Better memory layout**: FP8 MoE kernels optimized for Blackwell
 3. **Flash Attention 2**: More efficient attention computation
 4. **Async scheduling**: V1 engine overlapping
@@ -47,7 +47,7 @@
 - You need uncensored outputs
 - Working with creative writing
 - Need tool calling support
-- Want more capacity per token (26B active)
+- Want more capacity per token (4B active)
 
 ## Benchmark Methodology
 
