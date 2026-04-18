@@ -6,7 +6,7 @@ High-performance inference of **Qwen3.6-35B-A3B** with **DFlash speculative deco
 
 - **~50 tok/s** sustained generation speed
 - **Qwen3.6-35B-A3B** architecture with FP8 MoE quantization
-- **32K context window** (configurable)
+- **262K context window** (same as Gemma4-26B)
 - **~43 GiB GPU memory** at 38% utilization
 - **CUDA 13.0 + Blackwell optimized**
 - **DFlash speculative decoding** ready (requires vLLM with DFlash support)
@@ -77,7 +77,7 @@ curl http://localhost:8000/v1/chat/completions \
 | Parameter | Value | Description |
 |-----------|-------|-------------|
 | `--gpu-memory-utilization` | 0.38 | GPU memory allocation |
-| `--max-model-len` | 32768 | Maximum sequence length |
+| `--max-model-len` | 262144 | Maximum sequence length |
 | `--tensor-parallel-size` | 1 | Single GPU |
 | `--kv-cache-dtype` | auto | Automatic KV cache dtype |
 | `--quantization` | fp8 | FP8 MoE quantization |

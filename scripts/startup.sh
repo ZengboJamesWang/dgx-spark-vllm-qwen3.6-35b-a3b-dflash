@@ -12,8 +12,8 @@ echo "Starting vLLM server with Qwen3.6-35B-A3B-DFlash..."
 exec vllm serve /models/qwen3.6-35b-a3b \
   --served-model-name qwen3.6-35b-a3b-dflash \
   --tensor-parallel-size 1 \
-  --max-model-len 32768 \
-  --gpu-memory-utilization 0.38 \
+  --max-model-len 262144 \
+  --gpu-memory-utilization 0.45 \
   --kv-cache-dtype auto \
   --enable-chunked-prefill \
   --enable-prefix-caching \
