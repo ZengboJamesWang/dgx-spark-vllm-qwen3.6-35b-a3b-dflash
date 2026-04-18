@@ -22,6 +22,21 @@ High-performance inference of **Qwen3.6-35B-A3B** with **DFlash speculative deco
 | 5 | HTTP vs HTTPS | 512 | 10.28s | **49.81 tok/s** |
 | **Average** | | **512** | **10.23s** | **50.06 tok/s** |
 
+### llama-benchy Results
+
+Standardized benchmark using [llama-benchy](https://github.com/ray-project/llama-benchy):
+
+| Test | Throughput | Peak | Latency |
+|------|-----------|------|---------|
+| Prompt processing (256 tokens) | 3070 t/s | — | 150ms TTFT |
+| Generation (128 tokens) | **50.48 t/s** | **51.0 t/s** | — |
+| Prompt + 512 context depth | 4932 t/s | — | 223ms TTFT |
+| Generation @ 512 depth | **50.28 t/s** | **51.0 t/s** | — |
+| Prompt + 1024 context depth | 3948 t/s | — | 391ms TTFT |
+| Generation @ 1024 depth | **50.16 t/s** | **51.0 t/s** | — |
+
+*Consistent ~50 tok/s generation speed across all context depths. See [benchmarks/llama-benchy-results.md](benchmarks/llama-benchy-results.md) for full details.*
+
 ## Hardware Requirements
 
 - **NVIDIA DGX Spark** (GB10 Blackwell GPU)
