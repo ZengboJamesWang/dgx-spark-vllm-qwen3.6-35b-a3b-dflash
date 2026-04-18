@@ -64,8 +64,9 @@ docker run -d --name "$CONTAINER_NAME" \
   -v /home/jameszbw/models/Qwen3.6-35B-A3B-FP8:/models/qwen3.6-35b-a3b:ro \
   -v ~/.cache/huggingface:/root/.cache/huggingface \
   -v "$STARTUP_SCRIPT:/startup.sh" \
+  --entrypoint bash \
   "$IMAGE" \
-  bash /startup.sh
+  /startup.sh
 
 echo ""
 echo "Container started: $CONTAINER_NAME"
