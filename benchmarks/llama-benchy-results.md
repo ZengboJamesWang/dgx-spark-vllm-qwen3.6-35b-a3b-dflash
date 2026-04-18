@@ -47,7 +47,7 @@ uvx llama-benchy \
 | **Speed** | ~50 tok/s | ~45 tok/s |
 | **Context** | 262K | 262K |
 | **Memory** | 52.8 GiB | ~47 GiB |
-| **Architecture** | MoE (35B/3.9B active) | Dense (26B) |
+| **Architecture** | MoE (35B/3.9B active) | MoE (31B/26B active) |
 | **Prompt Processing** | 3K-5K t/s | Similar |
 
 Qwen3.6 achieves similar or better performance with larger model capacity thanks to MoE efficiency.
