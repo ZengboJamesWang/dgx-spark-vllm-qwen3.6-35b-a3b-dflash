@@ -17,6 +17,9 @@ exec vllm serve /models/qwen3.6-35b-a3b \
   --kv-cache-dtype auto \
   --enable-chunked-prefill \
   --enable-prefix-caching \
+  --enable-auto-tool-choice \
+  --tool-call-parser qwen3_xml \
+  --reasoning-parser qwen3 \
   --trust-remote-code \
   --host 0.0.0.0 --port 8000 \
   --dtype bfloat16
