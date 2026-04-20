@@ -20,7 +20,7 @@ This is a warning, not an error. The model will still run correctly with fallbac
 - Check temperature - thermal throttling reduces performance
 
 ### Out of Memory
-- Reduce `--gpu-memory-utilization` (current: 0.38)
+- Reduce `--gpu-memory-utilization` (current: 0.45)
 - Reduce `--max-model-len` (current: 32768)
 - Stop other GPU processes
 - Enable FP8 KV cache: `--kv-cache-dtype fp8`

@@ -91,7 +91,7 @@ curl http://localhost:8000/v1/chat/completions \
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| `--gpu-memory-utilization` | 0.38 | GPU memory allocation |
+| `--gpu-memory-utilization` | 0.45 | GPU memory allocation |
 | `--max-model-len` | 262144 | Maximum sequence length |
 | `--tensor-parallel-size` | 1 | Single GPU |
 | `--kv-cache-dtype` | auto | Automatic KV cache dtype |
